@@ -24,9 +24,6 @@
 /*
  * Geometric lengths cannot be negative or zero.
  * We will reserve non-positive measures to indicate un-solved "unknowns".
- *
- * This macro function is only specified for documentation purposes.
- * As saying (x < 0) is shorter than saying KNOWN(x), it may never be used.
  */
 #define KNOWN(measure)          ((measure) > 0)
 
