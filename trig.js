@@ -1,24 +1,50 @@
 var coordinates_per_vertex = 4;
 var triangle = [];
 
+var direction = 0;
+var interval = 3;
+
+var base_angle = 45;
 var frames_per_second = 4;
 
 function display() {
     "use strict";
 
+    set_theta(base_angle);
+    if (direction < 0) {
+        base_angle += interval;
+        if (base_angle >= 90) {
+            base_angle = 90;
+            direction = 0;
+        }
+    } else {
+        base_angle -= interval;
+        if (base_angle < 0) {
+            base_angle = 0;
+            direction = -1;
+        }
+    }
     glDrawArrays(GL_LINE_LOOP, 0, 3);
     return;
 }
 
-function init() {
+function set_theta(degrees) {
     "use strict";
     var i, j;
     var x, y;
+    var radians;
     var X = 0, Y = 1, Z = 2, W = 3;
 
- // Default to a 45-45-90, isosceles right triangle.
-    x = 1;
-    y = 1;
+    while (degrees < 0) {
+        degrees += 360;
+    }
+    while (degrees > 90) {
+        degrees -= 90; // Viewport is maximized to focus on Quadrant I.
+    }
+    radians = Math.PI * (degrees / 180);
+
+    x = Math.cos(radians);
+    y = Math.sin(radians);
 
     triangle[0 * coordinates_per_vertex + X] = 0;
     triangle[0 * coordinates_per_vertex + Y] = 0;
@@ -72,7 +98,6 @@ function main_GL() {
         return;
     }
 
-    init();
     setInterval(display, 1000 / frames_per_second);
     do {
         error_code = glGetError();
