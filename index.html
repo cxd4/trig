@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>Exact Values of Trigonometric Functions</title>
+<title>Interactive Triangle Solver</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="blank.css" type="text/css">
 <script type="text/javascript" src="https://rawgit.com/cxd4/OpenGL-js/master/gl.js"></script>
@@ -8,7 +8,38 @@
 </head>
 
 <body onload="main_GL()">
-<canvas id="GL_canvas" width="512" height="512">
+<div>
+<table border="0" align="center">
+<tr>
+<td><i>A</i></td>
+<td align="center">=</td>
+<td><input type="text" id="A"></td>
+<td><i>B</i></td>
+<td align="center">=</td>
+<td><input type="text" id="B"></td>
+<td><i>C</i></td>
+<td align="center">=</td>
+<td><input type="text" id="C"></td>
+</tr>
+<tr>
+<td><i>a</i></td>
+<td align="center">=</td>
+<td><input type="text" id="a"></td>
+<td><i>b</i></td>
+<td align="center">=</td>
+<td><input type="text" id="b"></td>
+<td><i>c</i></td>
+<td align="center">=</td>
+<td><input type="text" id="c"></td>
+</tr>
+</table>
+</div>
+<div align="center">
+<button onclick="DOM_callback()">Synchronise Projection</button>
+</div>
+<p>This is a JavaScript rewrite of the <a href="https://github.com/cxd4/trig">original C application</a>.</p>
+
+<canvas id="GL_canvas" width="640" height="640">
 Your browser doesn't appear to support the <code>&lt;CANVAS&gt;</code> element.
 </canvas>
 </body>

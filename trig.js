@@ -1,92 +1,229 @@
-var coordinates_per_vertex = 4;
-var triangle = [];
+var triangle = [
+    0, 0, 0, 1,
+    0, 0, 0, 1,
+    0, 0, 0, 1
+];
+var X = 0, Y = 1, Z = 2, W = 3;
 
-var direction = 0;
-var interval = 3;
+var A, B, C;
+var a, b, c;
 
-var base_angle = 45;
-var frames_per_second = 4;
-
-function display() {
+function known(measure) {
     "use strict";
-
-    set_theta(base_angle);
-    if (direction < 0) {
-        base_angle += interval;
-        if (base_angle >= 90) {
-            base_angle = 90;
-            direction = 0;
-        }
-    } else {
-        base_angle -= interval;
-        if (base_angle < 0) {
-            base_angle = 0;
-            direction = -1;
-        }
+    if (measure === null || measure === undefined || measure === NaN) {
+        return false;
     }
-    glDrawArrays(GL_LINE_LOOP, 0, 3);
+    if (!measure) {
+        return false;
+    }
+    if (measure <= 0) {
+        return false;
+    }
+    return true;
+}
+
+function to_rads(degrees) {
+    "use strict";
+    return (degrees / 180 * Math.PI);
+}
+function to_degs(radians) {
+    "use strict";
+    return (radians * 180 / Math.PI);
+}
+
+function sin(x) {
+    "use strict";
+    return Math.sin(x);
+}
+function cos(x) {
+    "use strict";
+    return Math.cos(x);
+}
+function arcsin(x) {
+    "use strict";
+    return Math.asin(x);
+}
+function arccos(x) {
+    "use strict";
+    return Math.acos(x);
+}
+
+function construct_triangle(A, B, C) {
+    "use strict";
+    var theta;
+    var distance;
+    var x1, x2, y1, y2;
+    var aspect_ratio_adjustment = 0; // Try 1 if GL viewport is 2:1.
+
+    theta = (known(A) ? A : 60);
+    y1 = sin(to_rads(theta));
+    x1 = cos(to_rads(theta));
+    distance = Math.sqrt(x1 * x1 + y1 * y1);
+    distance *= sin(to_rads(theta)) / sin(to_rads(known(C) ? C : 60));
+    y2 = 0;
+    x2 = x1 + Math.sqrt(Math.pow(distance, 2) - Math.pow(y2 - y1, 2));
+
+ // Try to center the triangle horizontally on the canvas screen.
+    distance = 0; //(1 + (x1 < 0 ? x1 : 0)) + (1 - x2);
+    x1 -= distance / 2;
+    x2 -= distance / 2;
+
+ // Construct the triangle by its 3 angles to be flat on a horizontal side.
+    triangle[4*0 + X] = 0 - distance / 2;
+    triangle[4*0 + Y] = 0 - aspect_ratio_adjustment;
+    triangle[4*1 + X] = x1;
+    triangle[4*1 + Y] = y1;
+    triangle[4*2 + X] = x2;
+    triangle[4*2 + Y] = y2 - aspect_ratio_adjustment;
+
+    glVertexPointer(4, GL_FLOAT, 0, triangle);
+    glEnableClientState(GL_VERTEX_ARRAY);
     return;
 }
 
-function set_theta(degrees) {
-    "use strict";
-    var i, j;
-    var x, y;
-    var radians;
-    var X = 0, Y = 1, Z = 2, W = 3;
-
-    while (degrees < 0) {
-        degrees += 360;
+function solve_triangle() {
+ // Triangle Sum Theorem:  A + B + C = 180 [degrees]
+    if (known(A) && known(B) && !known(C)) {
+        C = 180 - A - B;
+        return true;
     }
-    while (degrees > 90) {
-        degrees -= 90; // Viewport is maximized to focus on Quadrant I.
+    if (known(A) && known(C) && !known(B)) {
+        B = 180 - A - C;
+        return true;
     }
-    radians = Math.PI * (degrees / 180);
-
-    x = Math.cos(radians);
-    y = Math.sin(radians);
-
-    triangle[0 * coordinates_per_vertex + X] = 0;
-    triangle[0 * coordinates_per_vertex + Y] = 0;
-
-    triangle[1 * coordinates_per_vertex + X] = x;
-    triangle[1 * coordinates_per_vertex + Y] = y;
-
-    triangle[2 * coordinates_per_vertex + X] = x;
-    triangle[2 * coordinates_per_vertex + Y] = 0;
-
-    for (i = 0; i < 3; i += 1) { // Adjust origin(0, 0) to (-1, -1).
-        triangle[i * coordinates_per_vertex + X] *= 2.0;
-        triangle[i * coordinates_per_vertex + Y] *= 2.0;
-        triangle[i * coordinates_per_vertex + X] -= 1.0;
-        triangle[i * coordinates_per_vertex + Y] -= 1.0;
+    if (known(B) && known(C) && !known(A)) {
+        A = 180 - B - C;
+        return true;
     }
-    for (i = 0; i < 3; i += 1) { // in case OpenGL is using 4-D coordinates
-        if (coordinates_per_vertex > Z) {
-            triangle[coordinates_per_vertex * i + Z] = 0.0;
+
+ // Law of Cosines
+    if (known(c) && known(a) && known(b)) {
+        if (!known(C)) {
+            C = to_degs(arccos((a * a + b * b - c * c) / (2 * a * b)));
+            return true;
         }
-        if (coordinates_per_vertex > W) {
-            triangle[coordinates_per_vertex * i + W] = 1.0;
+        if (!known(B)) {
+            B = to_degs(arccos((c * c + a * a - b * b) / (2 * a * c)));
+            return true;
+        }
+        if (!known(A)) {
+            A = to_degs(arccos((c * c - a * a + b * b) / (2 * b * c)));
+            return true;
         }
     }
 
-    glVertexPointer(coordinates_per_vertex, GL_FLOAT, 0, triangle);
-    glEnableClientState(GL_VERTEX_ARRAY);
+ // Law of Sines
+    if (known(c) && known(C) && known(A) && !known(a)) {
+        a = c / sin(to_rads(C)) * sin(to_rads(A));
+        return true;
+    }
+    if (known(c) && known(C) && known(B) && !known(b)) {
+        b = c / sin(to_rads(C)) * sin(to_rads(B));
+        return true;
+    }
+    if (known(a) && known(A) && known(C) && !known(c)) {
+        c = a / sin(to_rads(A)) * sin(to_rads(C));
+        return true;
+    }
+    if (known(b) && known(B) && known(C) && !known(c)) {
+        c = b / sin(to_rads(B)) * sin(to_rads(C));
+        return true;
+    }
+    if (known(a) && known(A) && known(B) && !known(b)) {
+        b = a / sin(to_rads(A)) * sin(to_rads(B));
+        return true;
+    }
+    if (known(b) && known(B) && known(A) && !known(a)) {
+        a = b / sin(to_rads(B)) * sin(to_rads(A));
+        return true;
+    }
+    return false;
+}
 
-    glEnable(GL_BLEND);
-    glDisable(GL_CULL_FACE);
+function DOM_callback() {
+    var retval, old_retval;
+    A = parseFloat(document.getElementById("A").value);
+    B = parseFloat(document.getElementById("B").value);
+    C = parseFloat(document.getElementById("C").value);
+    a = parseFloat(document.getElementById("a").value);
+    b = parseFloat(document.getElementById("b").value);
+    c = parseFloat(document.getElementById("c").value);
 
-    glDisableClientState(GL_COLOR_ARRAY);
-    glColor4f(1, 1, 1, 1.00);
+ // Invalidate side inputs if they violate the Law of Sines.
+    if (sin(to_rads(A)) / a != sin(to_rads(B)) / b) {
+        if (known(A) && known(a) && known(B) && known(b)) {
+            a = b = null;
+        }
+    }
+    if (sin(to_rads(A)) / a != sin(to_rads(C)) / c) {
+        if (known(A) && known(a) && known(C) && known(c)) {
+            a = c = null;
+        }
+    }
+    if (sin(to_rads(B)) / b != sin(to_rads(C)) / c) {
+        if (known(B) && known(b) && known(C) && known(c)) {
+            b = c = null;
+        }
+    }
 
-    glClearColor(0.00, 0.00, 0.00, 0.00);
-    glClear(GL_COLOR_BUFFER_BIT);
+ // Invalidate all angle inputs if they violate the sum rule.
+    if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
+        A = B = C = null;
+    }
 
-    glPointSize(1.0);
-    glLineWidth(1);
+    while (solve_triangle() !== false) {
+        retval = solve_triangle();
+        if (retval == false && old_retval == retval) {
+            break; // Consecutive failure indicates no way for further progress.
+        }
+        old_retval = retval;
+    }
+    construct_triangle(A, B, C);
 
-    glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
+    document.getElementById("A").value = known(A) ? A : "";
+    document.getElementById("B").value = known(B) ? B : "";
+    document.getElementById("C").value = known(C) ? C : "";
+    document.getElementById("a").value = known(a) ? a : "";
+    document.getElementById("b").value = known(b) ? b : "";
+    document.getElementById("c").value = known(c) ? c : "";
     return;
+}
+
+var frames_per_second = 10, interval = 1 / frames_per_second;
+var channel_fraction = 0, rainbow_cycle = 0;
+function color_refresh() {
+    switch (rainbow_cycle) {
+    case 0: // from red to yellow   (+G)
+        glColor4f(1, channel_fraction, 0, 1);
+        break;
+    case 1: // from yellow to green (-R)
+        glColor4f(channel_fraction, 1, 0, 1);
+        break;
+    case 2: // from green to cyan   (+B)
+        glColor4f(0, 1, channel_fraction, 1);
+        break;
+    case 3: // from cyan to blue    (-G)
+        glColor4f(0, channel_fraction, 1, 1);
+        break;
+    case 4: // from blue to magenta (+R)
+        glColor4f(channel_fraction, 0, 1, 1);
+        break;
+    case 5: // from magenta to red  (-B)
+        glColor4f(1, 0, channel_fraction, 1);
+        break;
+    }
+    if (rainbow_cycle % 2 === 1) {
+        channel_fraction -= interval;
+        if (channel_fraction <= 0) {
+            rainbow_cycle = (rainbow_cycle + 1) % 6;
+        }
+    } else {
+        channel_fraction += interval;
+        if (channel_fraction >= 1) {
+            rainbow_cycle = (rainbow_cycle + 1) % 6;
+        }
+    }
+    glDrawArrays(GL_LINE_LOOP, 0, 3);
 }
 
 function main_GL() {
@@ -97,8 +234,10 @@ function main_GL() {
         alert("Failed to initialize WebGL.");
         return;
     }
+    glLineWidth(3);
 
-    setInterval(display, 1000 / frames_per_second);
+    construct_triangle(A, B, C);
+    setInterval(color_refresh, 1000 / frames_per_second);
     do {
         error_code = glGetError();
         console.log("OpenGL error status:  " + error_code);
