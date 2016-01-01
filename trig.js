@@ -105,6 +105,24 @@ function solve_triangle() {
         return true;
     }
 
+ // angles of an equilateral triangle
+    if (a === b && b === c && known(c)) {
+        if (known(A) && A !== 60) {
+            C = B = A;
+            return true;
+        }
+        if (known(B) && B !== 60) {
+            C = A = B;
+            return true;
+        }
+        if (known(C) && C !== 60) {
+            A = B = C;
+            return true;
+        }
+        A = B = C = 60;
+        return true;
+    }
+
  // opposite sides of congruent angles in an isosceles
     if (known(A) && known(B) && A === B) {
         if (known(a) && !known(b)) {
