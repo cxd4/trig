@@ -1,7 +1,13 @@
 var triangle = [
     0, 0, 0, 1,
     0, 0, 0, 1,
-    0, 0, 0, 1
+    0, 0, 0, 1,
+
+ // optional four-quadrant planar division grid, stored in triangle vtx. cache
+    -1, 0, 0, 1,
+    +1, 0, 0, 1,
+    0, -1, 0, 1,
+    0, +1, 0, 1
 ];
 var X = 0, Y = 1, Z = 2, W = 3;
 
@@ -271,6 +277,9 @@ function DOM_callback() {
 var frames_per_second = 10, interval = 1 / frames_per_second;
 var channel_fraction = 0, rainbow_cycle = 0;
 function color_refresh() {
+    glColor4f(0.5, 0.5, 0.5, 0.5);
+    glDrawArrays(GL_LINES, 3, 4);
+
     switch (rainbow_cycle) {
     case 0: // from red to yellow   (+G)
         glColor4f(1, channel_fraction, 0, 1);
