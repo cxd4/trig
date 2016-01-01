@@ -56,6 +56,10 @@ function construct_triangle(A, B, C) {
     var aspect_ratio_adjustment = 0; // Try 1 if GL viewport is 2:1.
 
     theta = (known(A) ? A : 60);
+    if (known(C) && C > 90) {
+        alert("Warning:  C > 90 causes a bug.  Try switching C with A.");
+    }
+
     y1 = sin(to_rads(theta));
     x1 = cos(to_rads(theta));
     distance = sin(to_rads(theta)) / sin(to_rads(known(C) ? C : 60));
