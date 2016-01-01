@@ -58,8 +58,7 @@ function construct_triangle(A, B, C) {
     theta = (known(A) ? A : 60);
     y1 = sin(to_rads(theta));
     x1 = cos(to_rads(theta));
-    distance = Math.sqrt(x1 * x1 + y1 * y1);
-    distance *= sin(to_rads(theta)) / sin(to_rads(known(C) ? C : 60));
+    distance = sin(to_rads(theta)) / sin(to_rads(known(C) ? C : 60));
     y2 = 0;
     x2 = x1 + Math.sqrt(Math.pow(distance, 2) - Math.pow(y2 - y1, 2));
 
