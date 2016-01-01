@@ -258,15 +258,15 @@ function DOM_callback() {
             break; // Consecutive failure indicates no way for further progress.
         }
         if (known(A) && A !== 60 && A === B && B === C) {
-            alert("illegal triangle\nequilateral w/ non-60-degree angles");
+            alert("invalid triangle\nequilateral w/ non-60-degree angles");
             return;
         }
         if (A === B && A >= 90 || B === C && B >= 90 || A === C && C >= 90) {
-            alert("illegal triangle\nisosceles w/ non-acute, congruent angles");
+            alert("invalid triangle\nisosceles w/ non-acute, congruent angles");
             return;
         }
         if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
-            alert("illegal triangle\nsum of interior angles not 180");
+            alert("invalid triangle\nsum of interior angles not 180");
             return;
         }
         old_retval = retval;
