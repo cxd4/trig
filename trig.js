@@ -261,6 +261,10 @@ function DOM_callback() {
         if (retval == false && old_retval == retval) {
             break; // Consecutive failure indicates no way for further progress.
         }
+        if (known(A) && A !== 60 && A === B && B === C) {
+            alert("illegal triangle\nequilateral w/ non-60-degree angles");
+            return;
+        }
         if (A === B && A >= 90 || B === C && B >= 90 || A === C && C >= 90) {
             alert("illegal triangle\nisosceles w/ non-acute, congruent angles");
             return;
