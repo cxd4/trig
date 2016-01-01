@@ -96,6 +96,82 @@ function solve_triangle() {
         return true;
     }
 
+ // opposite sides of congruent angles in an isosceles
+    if (known(A) && known(B) && A === B) {
+        if (known(a) && !known(b)) {
+            b = a;
+            return true;
+        }
+        if (known(b) && !known(a)) {
+            a = b;
+            return true;
+        }
+    }
+    if (known(A) && known(C) && A === C) {
+        if (known(a) && !known(c)) {
+            c = a;
+            return true;
+        }
+        if (known(c) && !known(a)) {
+            a = c;
+            return true;
+        }
+    }
+    if (known(B) && known(C) && B === C) {
+        if (known(b) && !known(c)) {
+            c = b;
+            return true;
+        }
+        if (known(c) && !known(b)) {
+            b = c;
+            return true;
+        }
+    }
+
+ // opposite angles of congruent sides in an isosceles
+    if (known(a) && known(b) && a === b) {
+        if (known(A) && !known(B)) {
+            B = A;
+            return true;
+        }
+        if (known(B) && !known(A)) {
+            A = B;
+            return true;
+        }
+        if (known(C) && !known(A) && !known(B)) {
+            A = B = (180 - C) / 2;
+            return true;
+        }
+    }
+    if (known(a) && known(c) && a === c) {
+        if (known(A) && !known(C)) {
+            C = A;
+            return true;
+        }
+        if (known(C) && !known(A)) {
+            A = C;
+            return true;
+        }
+        if (known(B) && !known(A) && !known(C)) {
+            A = C = (180 - B) / 2;
+            return true;
+        }
+    }
+    if (known(b) && known(c) && b === c) {
+        if (known(B) && !known(C)) {
+            C = B;
+            return true;
+        }
+        if (known(C) && !known(B)) {
+            B = C;
+            return true;
+        }
+        if (known(A) && !known(B) && !known(C)) {
+            B = C = (180 - A) / 2;
+            return true;
+        }
+    }
+
  // Law of Cosines
     if (known(c) && known(a) && known(b)) {
         if (!known(C)) {
