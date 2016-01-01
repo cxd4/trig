@@ -277,9 +277,11 @@ function DOM_callback() {
 var frames_per_second = 10, interval = 1 / frames_per_second;
 var channel_fraction = 0, rainbow_cycle = 0;
 function color_refresh() {
+    glLineWidth(1);
     glColor4f(0.5, 0.5, 0.5, 0.5);
     glDrawArrays(GL_LINES, 3, 4);
 
+    glLineWidth(2);
     switch (rainbow_cycle) {
     case 0: // from red to yellow   (+G)
         glColor4f(1, channel_fraction, 0, 1);
@@ -322,7 +324,6 @@ function main_GL() {
         alert("Failed to initialize WebGL.");
         return;
     }
-    glLineWidth(3);
 
     construct_triangle(A, B, C);
     setInterval(color_refresh, 1000 / frames_per_second);
