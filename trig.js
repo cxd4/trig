@@ -252,6 +252,10 @@ function valid_triangle() {
         alert("invalid triangle\nisosceles with non-acute, congruent angles");
         return false;
     }
+    if (A >= 90 && B >= 90 || A >= 90 && C >= 90 || B >= 90 && C >= 90) {
+        alert("invalid triangle\nneeds two or three acute angles");
+        return false;
+    }
     if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
         alert("invalid triangle\nsum of interior angles not 180");
         return false;
