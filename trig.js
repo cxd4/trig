@@ -269,11 +269,6 @@ function DOM_callback() {
         }
     }
 
- // Invalidate all angle inputs if they violate the sum rule.
-    if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
-        A = B = C = null;
-    }
-
     while (solve_triangle() !== false) {
         retval = solve_triangle();
         if (retval == false && old_retval == retval) {
@@ -285,6 +280,10 @@ function DOM_callback() {
         }
         if (A === B && A >= 90 || B === C && B >= 90 || A === C && C >= 90) {
             alert("illegal triangle\nisosceles w/ non-acute, congruent angles");
+            return;
+        }
+        if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
+            alert("illegal triangle\nsum of interior angles not 180");
             return;
         }
         old_retval = retval;
