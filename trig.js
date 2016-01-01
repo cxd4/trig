@@ -63,7 +63,7 @@ function construct_triangle(A, B, C) {
 
     theta = (known(A) ? A : 60);
     if (known(C) && C > 90) {
-        alert("Warning:  C > 90 causes a bug.  Try switching C with A.");
+        alert("Warning:  C or B > 90 goes off-screen.  Try switching with A.");
     }
 
     y1 = sin(to_rads(theta));
