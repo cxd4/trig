@@ -243,6 +243,22 @@ function solve_triangle() {
     return false;
 }
 
+function valid_triangle() {
+    if (known(A) && A !== 60 && A === B && B === C) {
+        alert("invalid triangle\nequilateral with non-60-degree angles");
+        return false;
+    }
+    if (A === B && A >= 90 || B === C && B >= 90 || A === C && C >= 90) {
+        alert("invalid triangle\nisosceles with non-acute, congruent angles");
+        return false;
+    }
+    if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
+        alert("invalid triangle\nsum of interior angles not 180");
+        return false;
+    }
+    return true;
+}
+
 function DOM_callback() {
     var retval, old_retval;
     A = parseFloat(document.getElementById("A").value);
@@ -252,21 +268,15 @@ function DOM_callback() {
     b = parseFloat(document.getElementById("b").value);
     c = parseFloat(document.getElementById("c").value);
 
+    if (!valid_triangle()) {
+        return;
+    }
     while (solve_triangle() !== false) {
         retval = solve_triangle();
         if (retval == false && old_retval == retval) {
             break; // Consecutive failure indicates no way for further progress.
         }
-        if (known(A) && A !== 60 && A === B && B === C) {
-            alert("invalid triangle\nequilateral w/ non-60-degree angles");
-            return;
-        }
-        if (A === B && A >= 90 || B === C && B >= 90 || A === C && C >= 90) {
-            alert("invalid triangle\nisosceles w/ non-acute, congruent angles");
-            return;
-        }
-        if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
-            alert("invalid triangle\nsum of interior angles not 180");
+        if (!valid_triangle()) {
             return;
         }
         old_retval = retval;
