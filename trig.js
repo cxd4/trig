@@ -252,23 +252,6 @@ function DOM_callback() {
     b = parseFloat(document.getElementById("b").value);
     c = parseFloat(document.getElementById("c").value);
 
- // Invalidate side inputs if they violate the Law of Sines.
-    if (sin(to_rads(A)) / a != sin(to_rads(B)) / b) {
-        if (known(A) && known(a) && known(B) && known(b)) {
-            a = b = null;
-        }
-    }
-    if (sin(to_rads(A)) / a != sin(to_rads(C)) / c) {
-        if (known(A) && known(a) && known(C) && known(c)) {
-            a = c = null;
-        }
-    }
-    if (sin(to_rads(B)) / b != sin(to_rads(C)) / c) {
-        if (known(B) && known(b) && known(C) && known(c)) {
-            b = c = null;
-        }
-    }
-
     while (solve_triangle() !== false) {
         retval = solve_triangle();
         if (retval == false && old_retval == retval) {
