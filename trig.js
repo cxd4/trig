@@ -244,6 +244,21 @@ function solve_triangle() {
 }
 
 function valid_triangle() {
+    if (known(a) && known(b) && known(c)) {
+        if (known(A) && known(B) && b*sin(to_rads(A)) !== a*sin(to_rads(B))) {
+            alert("invalid triangle\nsin("+A+")/" + a + " != sin("+B+")/" + b);
+            return false;
+        }
+        if (known(A) && known(C) && c*sin(to_rads(A)) !== a*sin(to_rads(C))) {
+            alert("invalid triangle\nsin("+A+")/" + a + " != sin("+C+")/" + c);
+            return false;
+        }
+        if (known(B) && known(C) && c*sin(to_rads(B)) !== b*sin(to_rads(C))) {
+            alert("invalid triangle\nsin("+B+")/" + b + " != sin("+C+")/" + c);
+            return false;
+        }
+    }
+
     if (known(A) && A !== 60 && A === B && B === C) {
         alert("invalid triangle\nequilateral with non-60-degree angles");
         return false;
