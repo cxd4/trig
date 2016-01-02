@@ -262,15 +262,20 @@ function valid_triangle() {
     }
 
     if (known(a) && known(b) && known(c)) {
-        if (known(A) && known(B) && b*sin(to_rads(A)) !== a*sin(to_rads(B))) {
+        var invalidity_margin;
+
+        invalidity_margin = Math.abs(b * sin(to_rads(A)) - a * sin(to_rads(B)));
+        if (known(A) && known(B) && invalidity_margin >= 0.01) {
             alert("invalid triangle\nsin("+A+")/" + a + " != sin("+B+")/" + b);
             return false;
         }
-        if (known(A) && known(C) && c*sin(to_rads(A)) !== a*sin(to_rads(C))) {
+        invalidity_margin = Math.abs(c * sin(to_rads(A)) - a * sin(to_rads(C)));
+        if (known(A) && known(C) && invalidity_margin >= 0.01) {
             alert("invalid triangle\nsin("+A+")/" + a + " != sin("+C+")/" + c);
             return false;
         }
-        if (known(B) && known(C) && c*sin(to_rads(B)) !== b*sin(to_rads(C))) {
+        invalidity_margin = Math.abs(c * sin(to_rads(B)) - b * sin(to_rads(C)));
+        if (known(B) && known(C) && invalidity_margin >= 0.01) {
             alert("invalid triangle\nsin("+B+")/" + b + " != sin("+C+")/" + c);
             return false;
         }
