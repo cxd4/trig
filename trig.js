@@ -244,49 +244,50 @@ function solve_triangle() {
 }
 
 function valid_triangle() {
+    var invalidity_margin;
+    var title = "invalid triangle\n";
+
     if (known(A) && A !== 60 && A === B && B === C) {
-        alert("invalid triangle\nequilateral with non-60-degree angles");
+        alert(title + "equilateral with non-60-degree angles");
         return false;
     }
     if (A === B && A >= 90 || B === C && B >= 90 || A === C && C >= 90) {
-        alert("invalid triangle\nisosceles with non-acute, congruent angles");
+        alert(title + "isosceles with non-acute, congruent angles");
         return false;
     }
     if (A >= 90 && B >= 90 || A >= 90 && C >= 90 || B >= 90 && C >= 90) {
-        alert("invalid triangle\nneeds two or three acute angles");
+        alert(title + "needs two or three acute angles");
         return false;
     }
     if (A + B + C !== 180 && known(A) && known(B) && known(C)) {
-        alert("invalid triangle\nsum of interior angles not 180");
+        alert(title + "sum of interior angles not 180");
         return false;
     }
 
     if (known(a) && known(b) && known(c)) {
-        var invalidity_margin;
-
      // Law of Co-Sines:
      // c^2 = a^2 + b^2 - 2ab sin(C); given either C = 0 or C = 180 degrees
      // c^2 = a^2 + b^2 +/- 2ab (sin(0) = +1 and sin(pi) = -1)
      // c^2 = (a - b)^2 or c^2 = (a + b)^2
         if (Math.abs(a * a + b * b - c * c) >= 2 * a * b) {
-            alert("invalid triangle\na^2 + b^2 = c^2 +/- 2ab\n|a +/- b| = c");
+            alert(title + "a^2 + b^2 = c^2 +/- 2ab\n|a +/- b| = c");
             return false;
         }
 
      // Law of Sines:  sin(A)/a = sin(B)/b = sin(C)/c
         invalidity_margin = Math.abs(b * sin(to_rads(A)) - a * sin(to_rads(B)));
         if (known(A) && known(B) && invalidity_margin >= 0.01) {
-            alert("invalid triangle\nsin("+A+")/" + a + " != sin("+B+")/" + b);
+            alert(title + "sin("+A+")/" + a + " != sin("+B+")/" + b);
             return false;
         }
         invalidity_margin = Math.abs(c * sin(to_rads(A)) - a * sin(to_rads(C)));
         if (known(A) && known(C) && invalidity_margin >= 0.01) {
-            alert("invalid triangle\nsin("+A+")/" + a + " != sin("+C+")/" + c);
+            alert(title + "sin("+A+")/" + a + " != sin("+C+")/" + c);
             return false;
         }
         invalidity_margin = Math.abs(c * sin(to_rads(B)) - b * sin(to_rads(C)));
         if (known(B) && known(C) && invalidity_margin >= 0.01) {
-            alert("invalid triangle\nsin("+B+")/" + b + " != sin("+C+")/" + c);
+            alert(title + "sin("+B+")/" + b + " != sin("+C+")/" + c);
             return false;
         }
     }
