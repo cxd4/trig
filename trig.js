@@ -264,6 +264,16 @@ function valid_triangle() {
     if (known(a) && known(b) && known(c)) {
         var invalidity_margin;
 
+     // Law of Co-Sines:
+     // c^2 = a^2 + b^2 - 2ab sin(C); given either C = 0 or C = 180 degrees
+     // c^2 = a^2 + b^2 +/- 2ab (sin(0) = +1 and sin(pi) = -1)
+     // c^2 = (a - b)^2 or c^2 = (a + b)^2
+        if (Math.abs(a * a + b * b - c * c) >= 2 * a * b) {
+            alert("invalid triangle\na^2 + b^2 = c^2 +/- 2ab\n|a +/- b| = c");
+            return false;
+        }
+
+     // Law of Sines:  sin(A)/a = sin(B)/b = sin(C)/c
         invalidity_margin = Math.abs(b * sin(to_rads(A)) - a * sin(to_rads(B)));
         if (known(A) && known(B) && invalidity_margin >= 0.01) {
             alert("invalid triangle\nsin("+A+")/" + a + " != sin("+B+")/" + b);
