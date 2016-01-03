@@ -76,3 +76,14 @@ Once you are set up to work with right triangles, scalene or otherwise:
 * tan(_B_) = _b_ / _a_ = cot(_A_)
 
 Right triangles are so important because you have simple one-dimensional magnitudes of "width" and "height", thanks to both dimensions being perpendicular to each other and forming the right angle in the triangle.
+
+### Impossible Triangles
+
+Aside from combinations of collectively insufficient information needed to solve a triangle, there are also combinations of conflicting, self-contradicting information that make drawing a legitimate, actual triangle impossible.  These tests are done responsively by the [JavaScript port of this program](http://cxd4.github.io/trig).
+
+* By the Triangle Sum Theorem, all three angle measures must total 180 degrees.
+* The congruent angles opposite from the two congruent sides in an isosceles triangle must be acute angles.
+* For an equilateral triangle, each and every angle measure must be 180 degrees.
+* If the Law of Sines fails, the given data cannot represent a valid triangle.
+* Each angle of any triangle must be between 0 and 180 degrees, non-inclusive.
+* The combination of any two sides must always be longer than the third, remaining side.  The Law of Co-Sines can be used to prove this by minimizing and maximizing the domain of arccos() to the range limits -1 and +1 (which correspond to the illegal angle measures of 180 degrees and 0 in a triangle), which will simplify to a perfect square trinomial set equal to the square of the third side.
