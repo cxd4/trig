@@ -6,8 +6,10 @@
  *
  * The default C pre-processor configuration here is to solve triangles.
  */
-
+#ifndef POLYGON_DEPTH
 #define POLYGON_DEPTH           3
+#endif
+
 #if (POLYGON_DEPTH < 3)
 #error You cannot have a polygon with fewer than 3 sides!
 #endif
