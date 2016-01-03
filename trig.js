@@ -281,17 +281,17 @@ function valid_triangle() {
      // Law of Sines:  sin(A)/a = sin(B)/b = sin(C)/c
         invalidity_margin = Math.abs(b * sin(to_rads(A)) - a * sin(to_rads(B)));
         if (known(A) && known(B) && invalidity_margin >= 0.01) {
-            alert(title + "sin("+A+")/" + a + " != sin("+B+")/" + b);
+            alert(title + "sin(" + A + ")/" + a + " != sin(" + B + ")/" + b);
             return false;
         }
         invalidity_margin = Math.abs(c * sin(to_rads(A)) - a * sin(to_rads(C)));
         if (known(A) && known(C) && invalidity_margin >= 0.01) {
-            alert(title + "sin("+A+")/" + a + " != sin("+C+")/" + c);
+            alert(title + "sin(" + A + ")/" + a + " != sin(" + C + ")/" + c);
             return false;
         }
         invalidity_margin = Math.abs(c * sin(to_rads(B)) - b * sin(to_rads(C)));
         if (known(B) && known(C) && invalidity_margin >= 0.01) {
-            alert(title + "sin("+B+")/" + b + " != sin("+C+")/" + c);
+            alert(title + "sin(" + B + ")/" + b + " != sin(" + C + ")/" + c);
             return false;
         }
     }
