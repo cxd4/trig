@@ -82,7 +82,7 @@ Right triangles are so important because you have simple one-dimensional magnitu
 Aside from combinations of collectively insufficient information needed to solve a triangle, there are also combinations of conflicting, self-contradicting information that make drawing a legitimate, actual triangle impossible.  These tests are done responsively by the [JavaScript port of this program](http://cxd4.github.io/trig).
 
 * By the Triangle Sum Theorem, all three angle measures must total 180 degrees.
-* The congruent angles opposite from the two congruent sides in an isosceles triangle must be acute angles.
+* The angles opposite from the two congruent sides in an isosceles triangle must be acute and congruent.
 * For an equilateral triangle, each and every angle measure must be 60 degrees.
 * If the Law of Sines fails, the given data cannot represent a valid triangle.
 * Each angle of any triangle must be between 0 and 180 degrees, non-inclusive.
