@@ -280,14 +280,77 @@ function valid_triangle() {
     return true;
 }
 
-function DOM_callback() {
-    var retval, old_retval;
+function import_all() {
     A = parseFloat(document.getElementById("A").value);
     B = parseFloat(document.getElementById("B").value);
     C = parseFloat(document.getElementById("C").value);
     a = parseFloat(document.getElementById("a").value);
     b = parseFloat(document.getElementById("b").value);
     c = parseFloat(document.getElementById("c").value);
+    return;
+}
+
+function export_all() {
+    document.getElementById("A").value = known(A) ? A : "";
+    document.getElementById("B").value = known(B) ? B : "";
+    document.getElementById("C").value = known(C) ? C : "";
+    document.getElementById("a").value = known(a) ? a : "";
+    document.getElementById("b").value = known(b) ? b : "";
+    document.getElementById("c").value = known(c) ? c : "";
+    return;
+}
+
+function recalculate(changed_ID) {
+    var retval, old_retval;
+
+    import_all();
+    if (known(a) && known(b) && known(c) && changed_ID >= 3) {
+        document.getElementById("A").value = "";
+        document.getElementById("B").value = "";
+        document.getElementById("C").value = "";
+    } // If all three side lengths are known, no angles need to be given.
+    switch (changed_ID) {
+    case 0: // modified given value for angle A
+        if (known(A) && known(B) && known(C)) {
+            document.getElementById("B").value = "";
+        }
+        if (known(a) && known(b) && known(c)) {
+            document.getElementById("a").value = "";
+        }
+        break;
+    case 1: // modified given value for angle B
+        if (known(A) && known(B) && known(C)) {
+            document.getElementById("C").value = "";
+        }
+        if (known(a) && known(b) && known(c)) {
+            document.getElementById("b").value = "";
+        }
+        break;
+    case 2: // modified given value for angle C
+        if (known(A) && known(B) && known(C)) {
+            document.getElementById("A").value = "";
+        }
+        if (known(a) && known(b) && known(c)) {
+            document.getElementById("c").value = "";
+        }
+        break;
+    case 3: // modified given value for side a
+        if (known(A) && (known(B) || known(C))) {
+            document.getElementById("A").value = "";
+        }
+        break;
+    case 4: // modified given value for side b
+        if (known(B) && (known(A) || known(C))) {
+            document.getElementById("B").value = "";
+        }
+        break;
+    case 5: // modified given value for side c
+        if (known(C) && (known(A) || known(B))) {
+            document.getElementById("C").value = "";
+        }
+        break;
+    }
+    import_all();
 
     if (!valid_triangle()) {
         return;
@@ -304,12 +367,7 @@ function DOM_callback() {
     }
     construct_triangle(A, B, C);
 
-    document.getElementById("A").value = known(A) ? A : "";
-    document.getElementById("B").value = known(B) ? B : "";
-    document.getElementById("C").value = known(C) ? C : "";
-    document.getElementById("a").value = known(a) ? a : "";
-    document.getElementById("b").value = known(b) ? b : "";
-    document.getElementById("c").value = known(c) ? c : "";
+    export_all();
     return;
 }
 
