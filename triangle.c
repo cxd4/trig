@@ -117,8 +117,6 @@ int find_side(double * sides, const double * angles)
  * For right triangles, that simplifies to:  c^2 = a^2 + b^2
  *
  * Even the "Pythagorean Theorem" risks extra precision round-off, however.
- *
- * Given a 0-degree angle, cos(0) is 1 and the sqrt() simplifies to (a - b).
  */
         if (!KNOWN(c) && KNOWN(C) && KNOWN(a) && KNOWN(b)) {
             c = sqrt(a*a + b*b - 2*a*b*cos(C));
