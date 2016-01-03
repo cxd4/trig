@@ -245,7 +245,7 @@ function solve_triangle() {
 
 function valid_triangle() {
     var invalidity_margin;
-    var title = "invalid triangle\n";
+    var title = "invalid triangle\n\n";
 
     if (known(A) && A !== 60 && A === B && B === C) {
         alert(title + "equilateral with non-60-degree angles");
