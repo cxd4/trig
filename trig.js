@@ -333,6 +333,7 @@ function recalculate(changed_ID) {
     case 0: // modified given value for angle A
         if (known(A) && known(B) && known(C)) {
             document.getElementById("B").value = "";
+            document.getElementById("b").value = "";
         }
         if (known(a) && known(b) && known(c)) {
             document.getElementById("a").value = "";
@@ -341,6 +342,7 @@ function recalculate(changed_ID) {
     case 1: // modified given value for angle B
         if (known(A) && known(B) && known(C)) {
             document.getElementById("C").value = "";
+            document.getElementById("c").value = "";
         }
         if (known(a) && known(b) && known(c)) {
             document.getElementById("b").value = "";
@@ -349,6 +351,7 @@ function recalculate(changed_ID) {
     case 2: // modified given value for angle C
         if (known(A) && known(B) && known(C)) {
             document.getElementById("A").value = "";
+            document.getElementById("a").value = "";
         }
         if (known(a) && known(b) && known(c)) {
             document.getElementById("c").value = "";
