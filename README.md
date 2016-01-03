@@ -83,7 +83,7 @@ Aside from combinations of collectively insufficient information needed to solve
 
 * By the Triangle Sum Theorem, all three angle measures must total 180 degrees.
 * The congruent angles opposite from the two congruent sides in an isosceles triangle must be acute angles.
-* For an equilateral triangle, each and every angle measure must be 180 degrees.
+* For an equilateral triangle, each and every angle measure must be 60 degrees.
 * If the Law of Sines fails, the given data cannot represent a valid triangle.
 * Each angle of any triangle must be between 0 and 180 degrees, non-inclusive.
 * The combination of any two sides must always be longer than the third, remaining side.  The Law of Co-Sines can be used to prove this by minimizing and maximizing the domain of arccos() to the range limits -1 and +1 (which correspond to the illegal angle measures of 180 degrees and 0 in a triangle), which will simplify to a perfect square trinomial set equal to the square of the third side.
