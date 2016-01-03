@@ -280,6 +280,16 @@ function valid_triangle() {
     return true;
 }
 
+function clear_all() {
+    document.getElementById("A").value = "";
+    document.getElementById("B").value = "";
+    document.getElementById("C").value = "";
+    document.getElementById("a").value = "";
+    document.getElementById("b").value = "";
+    document.getElementById("c").value = "";
+    return;
+}
+
 function import_all() {
     A = parseFloat(document.getElementById("A").value);
     B = parseFloat(document.getElementById("B").value);
@@ -291,12 +301,25 @@ function import_all() {
 }
 
 function export_all() {
-    document.getElementById("A").value = known(A) ? A : "";
-    document.getElementById("B").value = known(B) ? B : "";
-    document.getElementById("C").value = known(C) ? C : "";
-    document.getElementById("a").value = known(a) ? a : "";
-    document.getElementById("b").value = known(b) ? b : "";
-    document.getElementById("c").value = known(c) ? c : "";
+    clear_all();
+    if (known(A)) {
+        document.getElementById("A").value = A;
+    }
+    if (known(B)) {
+        document.getElementById("B").value = B;
+    }
+    if (known(C)) {
+        document.getElementById("C").value = C;
+    }
+    if (known(a)) {
+        document.getElementById("a").value = a;
+    }
+    if (known(b)) {
+        document.getElementById("b").value = b;
+    }
+    if (known(c)) {
+        document.getElementById("c").value = c;
+    }
     return;
 }
 
