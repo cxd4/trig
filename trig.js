@@ -219,6 +219,20 @@ function solve_triangle() {
         a = b / sin(to_rads(B)) * sin(to_rads(A));
         return true;
     }
+
+ // In the Side-Angle-Side combination, we cannot apply the Law of Sines.
+    if (known(a) && known(B) && known(c) && !known(b)) {
+        b = Math.sqrt(a * a + c * c - 2 * a * c * cos(to_rads(B)));
+        return true;
+    }
+    if (known(b) && known(A) && known(c) && !known(a)) {
+        a = Math.sqrt(b * b + c * c - 2 * b * c * cos(to_rads(A)));
+        return true;
+    }
+    if (known(b) && known(C) && known(a) && !known(c)) {
+        c = Math.sqrt(a * a + b * b - 2 * a * b * cos(to_rads(C)));
+        return true;
+    }
     return false;
 }
 
