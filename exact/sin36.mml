@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mtable>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mrow>
+       <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+       </msup>
+       <mo stretchy="false">+</mo>
+       <msup>
+        <mi>y</mi>
+        <mn>2</mn>
+       </msup>
+      </mrow>
+      <mo stretchy="false">=</mo>
+      <msup>
+       <mi>r</mi>
+       <mn>2</mn>
+      </msup>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>r</mi>
+      <mo stretchy="false">=</mo>
+      <mn>4</mn>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>x</mi>
+      <mo stretchy="false">=</mo>
+      <mrow>
+       <mn>1</mn>
+       <mo stretchy="false">+</mo>
+       <msqrt>
+        <mn>5</mn>
+       </msqrt>
+      </mrow>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mrow>
+       <mi>y</mi>
+       <mo stretchy="false">=</mo>
+       <msqrt>
+        <mn>2</mn>
+       </msqrt>
+      </mrow>
+      <msqrt>
+       <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">−</mo>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow/>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mtext>sin</mtext>
+      <mrow>
+       <mrow>
+        <mo fence="true" stretchy="true">(</mo>
+        <mrow>
+         <mfrac>
+          <mi mathvariant="normal">π</mi>
+          <mn>5</mn>
+         </mfrac>
+        </mrow>
+        <mo fence="true" stretchy="true">)</mo>
+       </mrow>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mi>y</mi>
+        <mi>r</mi>
+       </mfrac>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <msqrt>
+         <mn>2</mn>
+        </msqrt>
+        <mn>4</mn>
+       </mfrac>
+      </mrow>
+      <msqrt>
+       <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">−</mo>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mtext>cos</mtext>
+      <mrow>
+       <mrow>
+        <mo fence="true" stretchy="true">(</mo>
+        <mrow>
+         <mfrac>
+          <mi mathvariant="normal">π</mi>
+          <mn>5</mn>
+         </mfrac>
+        </mrow>
+        <mo fence="true" stretchy="true">)</mo>
+       </mrow>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mi>x</mi>
+        <mi>r</mi>
+       </mfrac>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mrow>
+         <mn>1</mn>
+         <mo stretchy="false">+</mo>
+         <msqrt>
+          <mn>5</mn>
+         </msqrt>
+        </mrow>
+        <mn>4</mn>
+       </mfrac>
+      </mrow>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mtext>tan</mtext>
+      <mrow>
+       <mrow>
+        <mo fence="true" stretchy="true">(</mo>
+        <mrow>
+         <mfrac>
+          <mi mathvariant="normal">π</mi>
+          <mn>5</mn>
+         </mfrac>
+        </mrow>
+        <mo fence="true" stretchy="true">)</mo>
+       </mrow>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mi>y</mi>
+        <mi>x</mi>
+       </mfrac>
+       <mo stretchy="false">=</mo>
+       <msqrt>
+        <mrow>
+         <mrow>
+          <mn>5</mn>
+          <mo stretchy="false">−</mo>
+          <mn>2</mn>
+         </mrow>
+         <msqrt>
+          <mn>5</mn>
+         </msqrt>
+        </mrow>
+       </msqrt>
+      </mrow>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mtext>csc</mtext>
+      <mrow>
+       <mrow>
+        <mo fence="true" stretchy="true">(</mo>
+        <mrow>
+         <mfrac>
+          <mi mathvariant="normal">π</mi>
+          <mn>5</mn>
+         </mfrac>
+        </mrow>
+        <mo fence="true" stretchy="true">)</mo>
+       </mrow>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mi>r</mi>
+        <mi>y</mi>
+       </mfrac>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <msqrt>
+         <mn>10</mn>
+        </msqrt>
+        <mn>5</mn>
+       </mfrac>
+      </mrow>
+      <msqrt>
+       <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">+</mo>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mtext>sec</mtext>
+      <mrow>
+       <mrow>
+        <mo fence="true" stretchy="true">(</mo>
+        <mrow>
+         <mfrac>
+          <mi mathvariant="normal">π</mi>
+          <mn>5</mn>
+         </mfrac>
+        </mrow>
+        <mo fence="true" stretchy="true">)</mo>
+       </mrow>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mi>r</mi>
+        <mi>x</mi>
+       </mfrac>
+       <mo stretchy="false">=</mo>
+       <mrow>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+        <mo stretchy="false">−</mo>
+        <mn>1</mn>
+       </mrow>
+      </mrow>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mtext>cot</mtext>
+      <mrow>
+       <mrow>
+        <mo fence="true" stretchy="true">(</mo>
+        <mrow>
+         <mfrac>
+          <mi mathvariant="normal">π</mi>
+          <mn>5</mn>
+         </mfrac>
+        </mrow>
+        <mo fence="true" stretchy="true">)</mo>
+       </mrow>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <mi>x</mi>
+        <mi>y</mi>
+       </mfrac>
+       <mo stretchy="false">=</mo>
+       <mfrac>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+        <mn>5</mn>
+       </mfrac>
+      </mrow>
+      <msqrt>
+       <mrow>
+        <mrow>
+         <mn>5</mn>
+         <mo stretchy="false">+</mo>
+         <mn>2</mn>
+        </mrow>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mtd>
+   </mtr>
+  </mtable>
+  <annotation encoding="StarMath 5.0">x^2 + y^2 = r^2 newline
+r = 4 newline
+x = 1 + sqrt 5 newline
+y = sqrt 2 sqrt{5 - sqrt 5} newline
+newline
+&quot;sin&quot; left(%pi over 5 right) = y over r = {sqrt 2 over 4} sqrt{5 - sqrt 5} newline
+&quot;cos&quot; left(%pi over 5 right) = x over r = {1 + sqrt 5} over 4 newline
+&quot;tan&quot; left(%pi over 5 right) = y over x = sqrt{5 - 2 sqrt 5} newline
+&quot;csc&quot; left(%pi over 5 right) = r over y = {sqrt 10 over 5} sqrt{5 + sqrt 5} newline
+&quot;sec&quot; left(%pi over 5 right) = r over x = sqrt 5 - 1 newline
+&quot;cot&quot; left(%pi over 5 right) = x over y = {sqrt 5 over 5} sqrt{5 + 2 sqrt 5}</annotation>
+ </semantics>
+</math>
