@@ -262,6 +262,10 @@ function valid_triangle() {
         alert(title + "sum of interior angles not 180");
         return false;
     }
+    if (A + B >= 180 || B + C >= 180 || A + C >= 180) {
+        alert(title + "dissatisfies Triangle Sum Theorem");
+        return false;
+    }
 
     if (known(a) && known(b) && known(c)) {
      // Law of Co-Sines:
