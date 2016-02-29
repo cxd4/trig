@@ -52,6 +52,7 @@ function construct_triangle(A, B, C) {
     "use strict";
     var theta;
     var distance;
+    var i = 0, scale_to_fit = 1.0;
     var x1, x2, y1, y2;
     var aspect_ratio_adjustment = 0; // Try 3 or more for 1:1 ratio.
 
@@ -70,6 +71,17 @@ function construct_triangle(A, B, C) {
     triangle[4*1 + Y] = y1;
     triangle[4*2 + X] = x2;
     triangle[4*2 + Y] = y2;
+
+ // Quick fix:  If angle measures B or C surpass A, drawing may go off-screen.
+    if (triangle[4*1 + X] > 1.0 && triangle[4*1 + X] > triangle[4*2 + X]) {
+        scale_to_fit = triangle[4*1 + X];
+    } else if (triangle[4*2 + X] > 1.0) {
+        scale_to_fit = triangle[4*2 + X];
+    }
+    for (i = 0; i < 3; i += 1) {
+        triangle[4*i + X] /= scale_to_fit;
+        triangle[4*i + Y] /= scale_to_fit;
+    }
 
     while (aspect_ratio_adjustment < 3) {
         triangle[(4 * aspect_ratio_adjustment) + Y] *= 2.0;
