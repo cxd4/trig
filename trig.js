@@ -1,13 +1,7 @@
 var triangle = [
     0, 0, 0, 1,
     0, 0, 0, 1,
-    0, 0, 0, 1,
-
- // optional four-quadrant planar division grid, stored in triangle vtx. cache
-    -1, 0, 0, 1,
-    +1, 0, 0, 1,
-    0, -1, 0, 1,
-    0, +1, 0, 1
+    0, 0, 0, 1
 ];
 var X = 0, Y = 1, Z = 2, W = 3;
 
@@ -59,7 +53,7 @@ function construct_triangle(A, B, C) {
     var theta;
     var distance;
     var x1, x2, y1, y2;
-    var aspect_ratio_adjustment = 0; // Try 1 if GL viewport is 2:1.
+    var aspect_ratio_adjustment = 0; // Try 3 or more for 1:1 ratio.
 
     theta = (known(A) ? A : 60);
     distance = sin(to_rads(theta)) / sin(to_rads(known(C) ? C : 60));
@@ -69,19 +63,19 @@ function construct_triangle(A, B, C) {
     y2 = 0;
     x2 = x1 + Math.sqrt(Math.pow(distance, 2) - Math.pow(y2 - y1, 2));
 
- // Try to center the triangle horizontally on the canvas screen.
-    distance = 0; //(1 + (x1 < 0 ? x1 : 0)) + (1 - x2);
-    x1 -= distance / 2;
-    x2 -= distance / 2;
-
  // Construct the triangle by its 3 angles to be flat on a horizontal side.
-    triangle[4*0 + X] = 0 - distance / 2;
-    triangle[4*0 + Y] = 0 - aspect_ratio_adjustment;
+    triangle[4*0 + X] = 0;
+    triangle[4*0 + Y] = 0;
     triangle[4*1 + X] = x1;
     triangle[4*1 + Y] = y1;
     triangle[4*2 + X] = x2;
-    triangle[4*2 + Y] = y2 - aspect_ratio_adjustment;
+    triangle[4*2 + Y] = y2;
 
+    while (aspect_ratio_adjustment < 3) {
+        triangle[(4 * aspect_ratio_adjustment) + Y] *= 2.0;
+        triangle[(4 * aspect_ratio_adjustment) + Y] -= 1.0;
+        aspect_ratio_adjustment += 1;
+    } // This is to stretch the triangle over a 2:1 viewport instead of 1:1.
     glVertexPointer(4, GL_FLOAT, 0, triangle);
     glEnableClientState(GL_VERTEX_ARRAY);
     return;
@@ -411,11 +405,8 @@ function recalculate(changed_ID) {
 var frames_per_second = 10, interval = 1 / frames_per_second;
 var channel_fraction = 0, rainbow_cycle = 0;
 function color_refresh() {
-    glLineWidth(1);
     glColor4f(0.5, 0.5, 0.5, 0.5);
-
     glClear(GL_COLOR_BUFFER_BIT);
-    glDrawArrays(GL_LINES, 3, 4);
 
     glLineWidth(2);
     switch (rainbow_cycle) {
