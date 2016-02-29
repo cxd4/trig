@@ -87,3 +87,9 @@ Aside from combinations of collectively insufficient information needed to solve
 * If the Law of Sines fails, the given data cannot represent a valid triangle.
 * Each angle of any triangle must be greater than arccos(+1) (0) and less than arccos(-1) (180 degrees).
 * The combination of any two sides must always be longer than the third, remaining side.  The Law of Co-Sines can be used to prove this by minimizing and maximizing the domain of arccos() to the range limits -1 and +1, which will simplify to a perfect square trinomial set equal to the square of the third side.
+
+### The Angle-Side-Side Case
+
+Unlike with the AAS (Angle-Angle-Side), ASA, SAS and SSS cases, this combination might be insufficient information for solving.  With the exception of special patterns (such as the two known sides revealing an isosceles triangle), it is difficult to know whether a real solution to a triangle even exists or if there are two solutions, in which only these three things are known:  an angle measure, the length of a side next to the angle, and another side lined up after the angle and previous side.
+
+Right now, this project makes no attempt to solve triangles with only the Angle-Side-Side combination of known parameters, but there are certain ways to determine when it can and when it can't be done.
