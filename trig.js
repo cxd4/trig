@@ -273,11 +273,11 @@ function valid_triangle() {
      // c^2 = a^2 + b^2 +/- 2ab (sin(0) = +1 and sin(pi) = -1)
      // c^2 = (a - b)^2 or c^2 = (a + b)^2
         if (Math.abs(a * a + b * b - c * c) > 2 * a * b) {
-            alert(title + "a^2 + b^2 > c^2 +/- 2ab\narccos() domain too small");
+            alert(title + "p^2 + q^2 > r^2 +/- 2pq\narccos() domain too small");
             return false;
         }
         if (c === Math.abs(a - b) || c === Math.abs(a + b)) {
-            alert(title + "a^2 + b^2 = c^2 +/- 2ab\n|AB +/- BC| = AC");
+            alert(title + "p^2 + q^2 = r^2 +/- 2pq\n|PQ +/- QR| = PR");
             return false;
         }
 
