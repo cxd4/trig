@@ -413,6 +413,8 @@ var channel_fraction = 0, rainbow_cycle = 0;
 function color_refresh() {
     glLineWidth(1);
     glColor4f(0.5, 0.5, 0.5, 0.5);
+
+    glClear(GL_COLOR_BUFFER_BIT);
     glDrawArrays(GL_LINES, 3, 4);
 
     glLineWidth(2);
