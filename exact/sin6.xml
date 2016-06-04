@@ -263,14 +263,14 @@
        <mo stretchy="false">=</mo>
        <mfrac>
         <mrow>
+         <msqrt>
+          <mn>2</mn>
+         </msqrt>
          <mrow>
           <msqrt>
            <mrow>
-            <mrow>
-             <mn>10</mn>
-             <mo stretchy="false">−</mo>
-             <mn>2</mn>
-            </mrow>
+            <mn>5</mn>
+            <mo stretchy="false">−</mo>
             <msqrt>
              <mn>5</mn>
             </msqrt>
@@ -464,7 +464,7 @@ y = sqrt 3 sqrt{10 - 2 sqrt 5} - (sqrt 5 + 1) newline
 newline
 &quot;sin&quot; left(%pi over 30 right) = y over r = {sqrt 6 sqrt{5 - sqrt 5} - (sqrt 5 + 1)} over 8 newline
 &quot;cos&quot; left(%pi over 30 right) = x over r = {sqrt 2 sqrt{5 - sqrt 5} + sqrt 3 (sqrt 5 + 1)} over 8 newline
-&quot;tan&quot; left(%pi over 30 right) = y over x = {sqrt{10 - 2 sqrt 5} - sqrt 3 (sqrt 5 - 1)} over 2 newline
+&quot;tan&quot; left(%pi over 30 right) = y over x = {sqrt 2 sqrt{5 - sqrt 5} - sqrt 3 (sqrt 5 - 1)} over 2 newline
 &quot;csc&quot; left(%pi over 30 right) = r over y = sqrt{5 + 2 sqrt 5} sqrt 3 + sqrt 5 + 2 newline
 &quot;sec&quot; left(%pi over 30 right) = r over x = sqrt 3 - sqrt{5 - 2 sqrt 5} newline
 &quot;cot&quot; left(%pi over 30 right) = x over y = {sqrt 2 sqrt{25 + 11 sqrt 5} + sqrt 3 (3 + sqrt 5)} over 2</annotation>
