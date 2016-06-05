@@ -127,7 +127,7 @@
         <mrow>
          <mfrac>
           <mi mathvariant="normal">π</mi>
-          <mn>30</mn>
+          <mn>20</mn>
          </mfrac>
         </mrow>
         <mo fence="true" stretchy="true">)</mo>
@@ -186,7 +186,7 @@
         <mrow>
          <mfrac>
           <mi mathvariant="normal">π</mi>
-          <mn>30</mn>
+          <mn>20</mn>
          </mfrac>
         </mrow>
         <mo fence="true" stretchy="true">)</mo>
@@ -245,7 +245,7 @@
         <mrow>
          <mfrac>
           <mi mathvariant="normal">π</mi>
-          <mn>30</mn>
+          <mn>20</mn>
          </mfrac>
         </mrow>
         <mo fence="true" stretchy="true">)</mo>
@@ -290,7 +290,7 @@
         <mrow>
          <mfrac>
           <mi mathvariant="normal">π</mi>
-          <mn>30</mn>
+          <mn>20</mn>
          </mfrac>
         </mrow>
         <mo fence="true" stretchy="true">)</mo>
@@ -349,7 +349,7 @@
         <mrow>
          <mfrac>
           <mi mathvariant="normal">π</mi>
-          <mn>30</mn>
+          <mn>20</mn>
          </mfrac>
         </mrow>
         <mo fence="true" stretchy="true">)</mo>
@@ -408,7 +408,7 @@
         <mrow>
          <mfrac>
           <mi mathvariant="normal">π</mi>
-          <mn>30</mn>
+          <mn>20</mn>
          </mfrac>
         </mrow>
         <mo fence="true" stretchy="true">)</mo>
@@ -449,11 +449,11 @@ r = 8 newline
 x = sqrt 2(1 + sqrt 5) + 2 sqrt{5 - sqrt 5} newline
 y = sqrt 2(1 + sqrt 5) - 2 sqrt{5 - sqrt 5} newline
 newline
-&quot;sin&quot; left(%pi over 30 right) = y over r = {sqrt 2(1 + sqrt 5) - 2 sqrt{5 - sqrt 5}} over 8 newline
-&quot;cos&quot; left(%pi over 30 right) = x over r = {sqrt 2(1 + sqrt 5) + 2 sqrt{5 - sqrt 5}} over 8 newline
-&quot;tan&quot; left(%pi over 30 right) = y over x = sqrt 5 + 1 - sqrt{5 + 2 sqrt 5} newline
-&quot;csc&quot; left(%pi over 30 right) = r over y = {sqrt 2(3 + sqrt 5) + 2 sqrt{5 + sqrt 5}} over 2 newline
-&quot;sec&quot; left(%pi over 30 right) = r over x = {sqrt 2(3 + sqrt 5) - 2 sqrt{5 + sqrt 5}} over 2 newline
-&quot;cot&quot; left(%pi over 30 right) = x over y = sqrt 5 + 1 + sqrt{5 + 2 sqrt 5}</annotation>
+&quot;sin&quot; left(%pi over 20 right) = y over r = {sqrt 2(1 + sqrt 5) - 2 sqrt{5 - sqrt 5}} over 8 newline
+&quot;cos&quot; left(%pi over 20 right) = x over r = {sqrt 2(1 + sqrt 5) + 2 sqrt{5 - sqrt 5}} over 8 newline
+&quot;tan&quot; left(%pi over 20 right) = y over x = sqrt 5 + 1 - sqrt{5 + 2 sqrt 5} newline
+&quot;csc&quot; left(%pi over 20 right) = r over y = {sqrt 2(3 + sqrt 5) + 2 sqrt{5 + sqrt 5}} over 2 newline
+&quot;sec&quot; left(%pi over 20 right) = r over x = {sqrt 2(3 + sqrt 5) - 2 sqrt{5 + sqrt 5}} over 2 newline
+&quot;cot&quot; left(%pi over 20 right) = x over y = sqrt 5 + 1 + sqrt{5 + 2 sqrt 5}</annotation>
  </semantics>
 </math>
