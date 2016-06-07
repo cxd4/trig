@@ -76,7 +76,7 @@
    <mtr>
     <mtd>
      <mrow>
-      <mi>sin</mi>
+      <mtext>sin</mtext>
       <mrow>
        <mrow>
         <mo fence="true" stretchy="true">(</mo>
@@ -113,7 +113,7 @@
    <mtr>
     <mtd>
      <mrow>
-      <mi>cos</mi>
+      <mtext>cos</mtext>
       <mrow>
        <mrow>
         <mo fence="true" stretchy="true">(</mo>
@@ -150,7 +150,7 @@
    <mtr>
     <mtd>
      <mrow>
-      <mi>tan</mi>
+      <mtext>tan</mtext>
       <mrow>
        <mrow>
         <mo fence="true" stretchy="true">(</mo>
@@ -182,7 +182,7 @@
    <mtr>
     <mtd>
      <mrow>
-      <mi mathvariant="italic">csc</mi>
+      <mtext>csc</mtext>
       <mrow>
        <mrow>
         <mo fence="true" stretchy="true">(</mo>
@@ -216,7 +216,7 @@
    <mtr>
     <mtd>
      <mrow>
-      <mi mathvariant="italic">sec</mi>
+      <mtext>sec</mtext>
       <mrow>
        <mrow>
         <mo fence="true" stretchy="true">(</mo>
@@ -250,7 +250,7 @@
    <mtr>
     <mtd>
      <mrow>
-      <mi>cot</mi>
+      <mtext>cot</mtext>
       <mrow>
        <mrow>
         <mo fence="true" stretchy="true">(</mo>
@@ -285,11 +285,11 @@ r = 4 newline
 x = sqrt 6 + sqrt 2 newline
 y = sqrt 6 - sqrt 2 newline
 newline
-sin left(%pi over 12 right) = y over r = {sqrt 6 - sqrt 2} over 4 newline
-cos left(%pi over 12 right) = x over r = {sqrt 6 + sqrt 2} over 4 newline
-tan left(%pi over 12 right) = y over x = 2 - sqrt 3 newline
-csc left(%pi over 12 right) = r over y = sqrt 6 + sqrt 2 newline
-sec left(%pi over 12 right) = r over x = sqrt 6 - sqrt 2 newline
-cot left(%pi over 12 right) = x over y = 2 + sqrt 3</annotation>
+&quot;sin&quot; left(%pi over 12 right) = y over r = {sqrt 6 - sqrt 2} over 4 newline
+&quot;cos&quot; left(%pi over 12 right) = x over r = {sqrt 6 + sqrt 2} over 4 newline
+&quot;tan&quot; left(%pi over 12 right) = y over x = 2 - sqrt 3 newline
+&quot;csc&quot; left(%pi over 12 right) = r over y = sqrt 6 + sqrt 2 newline
+&quot;sec&quot; left(%pi over 12 right) = r over x = sqrt 6 - sqrt 2 newline
+&quot;cot&quot; left(%pi over 12 right) = x over y = 2 + sqrt 3</annotation>
  </semantics>
 </math>
