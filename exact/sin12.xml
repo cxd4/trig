@@ -57,16 +57,16 @@
          </msqrt>
         </mrow>
        </msqrt>
-       <mo stretchy="false">−</mo>
+       <mo stretchy="false">+</mo>
        <mrow>
         <mo fence="true" stretchy="false">(</mo>
         <mrow>
          <mrow>
-          <mn>1</mn>
-          <mo stretchy="false">−</mo>
           <msqrt>
            <mn>5</mn>
           </msqrt>
+          <mo stretchy="false">−</mo>
+          <mn>1</mn>
          </mrow>
         </mrow>
         <mo fence="true" stretchy="false">)</mo>
@@ -95,7 +95,7 @@
          </msqrt>
         </mrow>
        </msqrt>
-       <mo stretchy="false">+</mo>
+       <mo stretchy="false">−</mo>
        <msqrt>
         <mn>3</mn>
        </msqrt>
@@ -104,11 +104,11 @@
        <mo fence="true" stretchy="false">(</mo>
        <mrow>
         <mrow>
-         <mn>1</mn>
-         <mo stretchy="false">−</mo>
          <msqrt>
           <mn>5</mn>
          </msqrt>
+         <mo stretchy="false">−</mo>
+         <mn>1</mn>
         </mrow>
        </mrow>
        <mo fence="true" stretchy="false">)</mo>
@@ -209,12 +209,12 @@
             </msqrt>
            </mrow>
           </msqrt>
-          <mo stretchy="false">−</mo>
-          <mn>1</mn>
           <mo stretchy="false">+</mo>
           <msqrt>
            <mn>5</mn>
           </msqrt>
+          <mo stretchy="false">−</mo>
+          <mn>1</mn>
          </mrow>
         </mrow>
         <mn>8</mn>
@@ -409,11 +409,11 @@
            <mo fence="true" stretchy="false">(</mo>
            <mrow>
             <mrow>
-             <mn>1</mn>
-             <mo stretchy="false">+</mo>
              <msqrt>
               <mn>5</mn>
              </msqrt>
+             <mo stretchy="false">+</mo>
+             <mn>1</mn>
             </mrow>
            </mrow>
            <mo fence="true" stretchy="false">)</mo>
@@ -442,14 +442,14 @@
   </mtable>
   <annotation encoding="StarMath 5.0">x^2 + y^2 = r^2 newline
 r = 8 newline
-x = sqrt 3 sqrt 2 sqrt{5 + sqrt 5} - (1 - sqrt 5) newline
-y = sqrt 2 sqrt{5 + sqrt 5} + sqrt 3(1 - sqrt 5) newline
+x = sqrt 3 sqrt 2 sqrt{5 + sqrt 5} + (sqrt 5 - 1) newline
+y = sqrt 2 sqrt{5 + sqrt 5} - sqrt 3(sqrt 5 - 1) newline
 newline
 &quot;sin&quot; left(%pi over 15 right) = y over r = {sqrt 2 sqrt{5 + sqrt 5} + sqrt 3 - sqrt 15} over 8 newline
-&quot;cos&quot; left(%pi over 15 right) = x over r = {sqrt 6 sqrt{5 + sqrt 5} - 1 + sqrt 5} over 8 newline
+&quot;cos&quot; left(%pi over 15 right) = x over r = {sqrt 6 sqrt{5 + sqrt 5} + sqrt 5 - 1} over 8 newline
 &quot;tan&quot; left(%pi over 15 right) = y over x = {sqrt 3(3 - sqrt 5) - sqrt 2 sqrt{25 - 11 sqrt 5}} over 2 newline
 &quot;csc&quot; left(%pi over 15 right) = r over y = sqrt{5 + 2 sqrt 5} + sqrt 3 newline
 &quot;sec&quot; left(%pi over 15 right) = r over x = sqrt 3 sqrt{5 - 2 sqrt 5} + 2 - sqrt 5 newline
-&quot;cot&quot; left(%pi over 15 right) = x over y = {sqrt 3(1 + sqrt 5) + sqrt 2 sqrt{5 + sqrt 5}} over 2</annotation>
+&quot;cot&quot; left(%pi over 15 right) = x over y = {sqrt 3(sqrt 5 + 1) + sqrt 2 sqrt{5 + sqrt 5}} over 2</annotation>
  </semantics>
 </math>

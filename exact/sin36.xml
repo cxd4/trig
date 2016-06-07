@@ -40,11 +40,11 @@
       <mi>x</mi>
       <mo stretchy="false">=</mo>
       <mrow>
-       <mn>1</mn>
-       <mo stretchy="false">+</mo>
        <msqrt>
         <mn>5</mn>
        </msqrt>
+       <mo stretchy="false">+</mo>
+       <mn>1</mn>
       </mrow>
      </mrow>
     </mtd>
@@ -139,11 +139,11 @@
        <mo stretchy="false">=</mo>
        <mfrac>
         <mrow>
-         <mn>1</mn>
-         <mo stretchy="false">+</mo>
          <msqrt>
           <mn>5</mn>
          </msqrt>
+         <mo stretchy="false">+</mo>
+         <mn>1</mn>
         </mrow>
         <mn>4</mn>
        </mfrac>
@@ -306,11 +306,11 @@
   </mtable>
   <annotation encoding="StarMath 5.0">x^2 + y^2 = r^2 newline
 r = 4 newline
-x = 1 + sqrt 5 newline
+x = sqrt 5 + 1 newline
 y = sqrt 2 sqrt{5 - sqrt 5} newline
 newline
 &quot;sin&quot; left(%pi over 5 right) = y over r = {sqrt 2 over 4} sqrt{5 - sqrt 5} newline
-&quot;cos&quot; left(%pi over 5 right) = x over r = {1 + sqrt 5} over 4 newline
+&quot;cos&quot; left(%pi over 5 right) = x over r = {sqrt 5 + 1} over 4 newline
 &quot;tan&quot; left(%pi over 5 right) = y over x = sqrt{5 - 2 sqrt 5} newline
 &quot;csc&quot; left(%pi over 5 right) = r over y = {sqrt 10 over 5} sqrt{5 + sqrt 5} newline
 &quot;sec&quot; left(%pi over 5 right) = r over x = sqrt 5 - 1 newline

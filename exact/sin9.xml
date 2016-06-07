@@ -49,11 +49,11 @@
         <mo fence="true" stretchy="false">(</mo>
         <mrow>
          <mrow>
-          <mn>1</mn>
-          <mo stretchy="false">+</mo>
           <msqrt>
            <mn>5</mn>
           </msqrt>
+          <mo stretchy="false">+</mo>
+          <mn>1</mn>
          </mrow>
         </mrow>
         <mo fence="true" stretchy="false">)</mo>
@@ -88,11 +88,11 @@
         <mo fence="true" stretchy="false">(</mo>
         <mrow>
          <mrow>
-          <mn>1</mn>
-          <mo stretchy="false">+</mo>
           <msqrt>
            <mn>5</mn>
           </msqrt>
+          <mo stretchy="false">+</mo>
+          <mn>1</mn>
          </mrow>
         </mrow>
         <mo fence="true" stretchy="false">)</mo>
@@ -148,11 +148,11 @@
            <mo fence="true" stretchy="false">(</mo>
            <mrow>
             <mrow>
-             <mn>1</mn>
-             <mo stretchy="false">+</mo>
              <msqrt>
               <mn>5</mn>
              </msqrt>
+             <mo stretchy="false">+</mo>
+             <mn>1</mn>
             </mrow>
            </mrow>
            <mo fence="true" stretchy="false">)</mo>
@@ -207,11 +207,11 @@
            <mo fence="true" stretchy="false">(</mo>
            <mrow>
             <mrow>
-             <mn>1</mn>
-             <mo stretchy="false">+</mo>
              <msqrt>
               <mn>5</mn>
              </msqrt>
+             <mo stretchy="false">+</mo>
+             <mn>1</mn>
             </mrow>
            </mrow>
            <mo fence="true" stretchy="false">)</mo>
@@ -446,11 +446,11 @@
   </mtable>
   <annotation encoding="StarMath 5.0">x^2 + y^2 = r^2 newline
 r = 8 newline
-x = sqrt 2(1 + sqrt 5) + 2 sqrt{5 - sqrt 5} newline
-y = sqrt 2(1 + sqrt 5) - 2 sqrt{5 - sqrt 5} newline
+x = sqrt 2(sqrt 5 + 1) + 2 sqrt{5 - sqrt 5} newline
+y = sqrt 2(sqrt 5 + 1) - 2 sqrt{5 - sqrt 5} newline
 newline
-&quot;sin&quot; left(%pi over 20 right) = y over r = {sqrt 2(1 + sqrt 5) - 2 sqrt{5 - sqrt 5}} over 8 newline
-&quot;cos&quot; left(%pi over 20 right) = x over r = {sqrt 2(1 + sqrt 5) + 2 sqrt{5 - sqrt 5}} over 8 newline
+&quot;sin&quot; left(%pi over 20 right) = y over r = {sqrt 2(sqrt 5 + 1) - 2 sqrt{5 - sqrt 5}} over 8 newline
+&quot;cos&quot; left(%pi over 20 right) = x over r = {sqrt 2(sqrt 5 + 1) + 2 sqrt{5 - sqrt 5}} over 8 newline
 &quot;tan&quot; left(%pi over 20 right) = y over x = sqrt 5 + 1 - sqrt{5 + 2 sqrt 5} newline
 &quot;csc&quot; left(%pi over 20 right) = r over y = {sqrt 2(3 + sqrt 5) + 2 sqrt{5 + sqrt 5}} over 2 newline
 &quot;sec&quot; left(%pi over 20 right) = r over x = {sqrt 2(3 + sqrt 5) - 2 sqrt{5 + sqrt 5}} over 2 newline
