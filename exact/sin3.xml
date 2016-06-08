@@ -7,29 +7,30 @@
     <mtd>
      <mrow>
       <mrow>
-       <mrow>
-        <msup>
-         <mi>x</mi>
-         <mn>2</mn>
-        </msup>
-        <mo stretchy="false">+</mo>
-        <msup>
-         <mi>y</mi>
-         <mn>2</mn>
-        </msup>
-       </mrow>
-       <mo stretchy="false">=</mo>
        <msup>
-        <mi>r</mi>
+        <mi>x</mi>
+        <mn>2</mn>
+       </msup>
+       <mo stretchy="false">+</mo>
+       <msup>
+        <mi>y</mi>
         <mn>2</mn>
        </msup>
       </mrow>
-      <mtext>; when </mtext>
-      <mrow>
+      <mo stretchy="false">=</mo>
+      <msup>
        <mi>r</mi>
-       <mo stretchy="false">=</mo>
-       <mn>8</mn>
-      </mrow>
+       <mn>2</mn>
+      </msup>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <mi>r</mi>
+      <mo stretchy="false">=</mo>
+      <mn>8</mn>
      </mrow>
     </mtd>
    </mtr>
@@ -145,6 +146,11 @@
        <mo fence="true" stretchy="false">)</mo>
       </mrow>
      </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow/>
     </mtd>
    </mtr>
    <mtr>
@@ -691,21 +697,22 @@
     </mtd>
    </mtr>
   </mtable>
-  <annotation encoding="StarMath 5.0">x^2+y^2=r^2&quot;; when &quot;r=8 newline x=sqrt{3-sqrt 5}(
-sqrt 3-1)+sqrt{5+sqrt 5}(sqrt 3+1)newline y =sqrt{3-
-sqrt 5}(sqrt 3+1)-sqrt{5+sqrt 5}(sqrt 3-1)newline
-&quot;sin&quot;left(%pi over 60 right)=y over r={sqrt{3- sqrt
-5}(sqrt 3+1)-sqrt{5+sqrt 5}(sqrt 3-1)}over 8
-newline&quot;cos&quot;left(%pi over 60 right)=x over r={sqrt{3-
-sqrt 5}(sqrt 3-1) + sqrt{5+sqrt 5}(sqrt 3+1)} over 8
-newline &quot;tan&quot;left(%pi over 60 right)=y over x={(2 sqrt 3
--1-sqrt 5)(3+sqrt 5)(sqrt{10-2 sqrt 5}-2)}over 8 newline
-&quot;csc&quot;left(%pi over 60 right)=r over y={left[sqrt{3-sqrt 5}
-(3 sqrt 3+5) + sqrt{5+sqrt 5}(sqrt 3+1)right](2 sqrt 3+
-sqrt 5-1)} over 4 newline &quot;sec&quot;left(%pi over 60 right)=r
-over x={left[sqrt{3-sqrt 5}(sqrt 3+1)-sqrt{5+sqrt
-5}(sqrt 3-1)right](sqrt{15 + 6 sqrt 5}+2+sqrt 5)}over 4
-newline &quot;cot&quot;left(%pi over 60 right)=x over y={(2 sqrt
-3+1+sqrt 5)(3+sqrt 5)(sqrt{10-2 sqrt 5}+2)}over 8</annotation>
+  <annotation encoding="StarMath 5.0">x^2 + y^2 = r^2 newline
+r = 8 newline
+x = sqrt{3 - sqrt{5}}(sqrt{3} - 1) + sqrt{5 + sqrt{5}}(sqrt{3} + 1) newline
+y = sqrt{3 - sqrt{5}}(sqrt{3} + 1) - sqrt{5 + sqrt{5}}(sqrt{3} - 1) newline
+newline
+&quot;sin&quot; left(%pi over 60 right) = y over r =
+{sqrt{3 - sqrt5}(sqrt3 + 1) - sqrt{5 + sqrt5}(sqrt3 - 1)} over 8 newline
+&quot;cos&quot; left(%pi over 60 right) = x over r =
+{sqrt{3 - sqrt5}(sqrt3 - 1) + sqrt{5 + sqrt5}(sqrt3 + 1)} over 8 newline
+&quot;tan&quot; left(%pi over 60 right) = y over x =
+{(2sqrt3 - 1 - sqrt5)(3 + sqrt 5)(sqrt{10 - 2 sqrt5} - 2)} over 8 newline
+&quot;csc&quot; left(%pi over 60 right) = r over y =
+{left[sqrt{3 - sqrt5}(3sqrt3 + 5) + sqrt{5 + sqrt5}(sqrt3 + 1)right](2sqrt3 + sqrt5 - 1)} over 4 newline
+&quot;sec&quot; left(%pi over 60 right) = r over x =
+{left[sqrt{3 - sqrt5}(sqrt3 + 1) - sqrt{5 + sqrt5}(sqrt3 - 1)right](sqrt{15 + 6sqrt5} + 2 + sqrt5)} over 4 newline
+&quot;cot&quot; left(%pi over 60 right) = x over y =
+{(2sqrt3 + 1 + sqrt5)(3 + sqrt5)(sqrt{10 - 2sqrt5} + 2)} over 8</annotation>
  </semantics>
 </math>
