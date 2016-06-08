@@ -30,7 +30,7 @@
      <mrow>
       <mi>r</mi>
       <mo stretchy="false">=</mo>
-      <mn>8</mn>
+      <mn>16</mn>
      </mrow>
     </mtd>
    </mtr>
@@ -41,14 +41,21 @@
        <mi>x</mi>
        <mo stretchy="false">=</mo>
        <msqrt>
+        <mn>2</mn>
+       </msqrt>
+      </mrow>
+      <mrow>
+       <mo fence="true" stretchy="false">(</mo>
+       <mrow>
         <mrow>
-         <mn>3</mn>
-         <mo stretchy="false">−</mo>
          <msqrt>
           <mn>5</mn>
          </msqrt>
+         <mo stretchy="false">−</mo>
+         <mn>1</mn>
         </mrow>
-       </msqrt>
+       </mrow>
+       <mo fence="true" stretchy="false">)</mo>
       </mrow>
       <mrow>
        <mrow>
@@ -65,16 +72,17 @@
         <mo fence="true" stretchy="false">)</mo>
        </mrow>
        <mo stretchy="false">+</mo>
-       <msqrt>
-        <mrow>
-         <mn>5</mn>
-         <mo stretchy="false">+</mo>
-         <msqrt>
-          <mn>5</mn>
-         </msqrt>
-        </mrow>
-       </msqrt>
+       <mn>2</mn>
       </mrow>
+      <msqrt>
+       <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">+</mo>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+       </mrow>
+      </msqrt>
       <mrow>
        <mo fence="true" stretchy="false">(</mo>
        <mrow>
@@ -98,14 +106,21 @@
        <mi>y</mi>
        <mo stretchy="false">=</mo>
        <msqrt>
+        <mn>2</mn>
+       </msqrt>
+      </mrow>
+      <mrow>
+       <mo fence="true" stretchy="false">(</mo>
+       <mrow>
         <mrow>
-         <mn>3</mn>
-         <mo stretchy="false">−</mo>
          <msqrt>
           <mn>5</mn>
          </msqrt>
+         <mo stretchy="false">−</mo>
+         <mn>1</mn>
         </mrow>
-       </msqrt>
+       </mrow>
+       <mo fence="true" stretchy="false">)</mo>
       </mrow>
       <mrow>
        <mrow>
@@ -122,16 +137,17 @@
         <mo fence="true" stretchy="false">)</mo>
        </mrow>
        <mo stretchy="false">−</mo>
-       <msqrt>
-        <mrow>
-         <mn>5</mn>
-         <mo stretchy="false">+</mo>
-         <msqrt>
-          <mn>5</mn>
-         </msqrt>
-        </mrow>
-       </msqrt>
+       <mn>2</mn>
       </mrow>
+      <msqrt>
+       <mrow>
+        <mn>5</mn>
+        <mo stretchy="false">+</mo>
+        <msqrt>
+         <mn>5</mn>
+        </msqrt>
+       </mrow>
+      </msqrt>
       <mrow>
        <mo fence="true" stretchy="false">(</mo>
        <mrow>
@@ -176,15 +192,21 @@
        <mo stretchy="false">=</mo>
        <mfrac>
         <mrow>
-         <msqrt>
+         <mrow>
+          <mo fence="true" stretchy="false">(</mo>
           <mrow>
-           <mn>3</mn>
-           <mo stretchy="false">−</mo>
-           <msqrt>
-            <mn>5</mn>
-           </msqrt>
+           <mrow>
+            <msqrt>
+             <mn>10</mn>
+            </msqrt>
+            <mo stretchy="false">−</mo>
+            <msqrt>
+             <mn>2</mn>
+            </msqrt>
+           </mrow>
           </mrow>
-         </msqrt>
+          <mo fence="true" stretchy="false">)</mo>
+         </mrow>
          <mrow>
           <mrow>
            <mo fence="true" stretchy="false">(</mo>
@@ -200,16 +222,17 @@
            <mo fence="true" stretchy="false">)</mo>
           </mrow>
           <mo stretchy="false">−</mo>
-          <msqrt>
-           <mrow>
-            <mn>5</mn>
-            <mo stretchy="false">+</mo>
-            <msqrt>
-             <mn>5</mn>
-            </msqrt>
-           </mrow>
-          </msqrt>
+          <mn>2</mn>
          </mrow>
+         <msqrt>
+          <mrow>
+           <mn>5</mn>
+           <mo stretchy="false">+</mo>
+           <msqrt>
+            <mn>5</mn>
+           </msqrt>
+          </mrow>
+         </msqrt>
          <mrow>
           <mo fence="true" stretchy="false">(</mo>
           <mrow>
@@ -224,7 +247,7 @@
           <mo fence="true" stretchy="false">)</mo>
          </mrow>
         </mrow>
-        <mn>8</mn>
+        <mn>16</mn>
        </mfrac>
       </mrow>
      </mrow>
@@ -253,15 +276,21 @@
        <mo stretchy="false">=</mo>
        <mfrac>
         <mrow>
-         <msqrt>
+         <mrow>
+          <mo fence="true" stretchy="false">(</mo>
           <mrow>
-           <mn>3</mn>
-           <mo stretchy="false">−</mo>
-           <msqrt>
-            <mn>5</mn>
-           </msqrt>
+           <mrow>
+            <msqrt>
+             <mn>10</mn>
+            </msqrt>
+            <mo stretchy="false">−</mo>
+            <msqrt>
+             <mn>2</mn>
+            </msqrt>
+           </mrow>
           </mrow>
-         </msqrt>
+          <mo fence="true" stretchy="false">)</mo>
+         </mrow>
          <mrow>
           <mrow>
            <mo fence="true" stretchy="false">(</mo>
@@ -277,16 +306,17 @@
            <mo fence="true" stretchy="false">)</mo>
           </mrow>
           <mo stretchy="false">+</mo>
-          <msqrt>
-           <mrow>
-            <mn>5</mn>
-            <mo stretchy="false">+</mo>
-            <msqrt>
-             <mn>5</mn>
-            </msqrt>
-           </mrow>
-          </msqrt>
+          <mn>2</mn>
          </mrow>
+         <msqrt>
+          <mrow>
+           <mn>5</mn>
+           <mo stretchy="false">+</mo>
+           <msqrt>
+            <mn>5</mn>
+           </msqrt>
+          </mrow>
+         </msqrt>
          <mrow>
           <mo fence="true" stretchy="false">(</mo>
           <mrow>
@@ -301,7 +331,7 @@
           <mo fence="true" stretchy="false">)</mo>
          </mrow>
         </mrow>
-        <mn>8</mn>
+        <mn>16</mn>
        </mfrac>
       </mrow>
      </mrow>
@@ -419,15 +449,21 @@
           <mo fence="true" stretchy="true">[</mo>
           <mrow>
            <mrow>
-            <msqrt>
+            <mrow>
+             <mo fence="true" stretchy="false">(</mo>
              <mrow>
-              <mn>3</mn>
-              <mo stretchy="false">−</mo>
-              <msqrt>
-               <mn>5</mn>
-              </msqrt>
+              <mrow>
+               <msqrt>
+                <mn>10</mn>
+               </msqrt>
+               <mo stretchy="false">−</mo>
+               <msqrt>
+                <mn>2</mn>
+               </msqrt>
+              </mrow>
              </mrow>
-            </msqrt>
+             <mo fence="true" stretchy="false">)</mo>
+            </mrow>
             <mrow>
              <mrow>
               <mo fence="true" stretchy="false">(</mo>
@@ -446,16 +482,17 @@
               <mo fence="true" stretchy="false">)</mo>
              </mrow>
              <mo stretchy="false">+</mo>
-             <msqrt>
-              <mrow>
-               <mn>5</mn>
-               <mo stretchy="false">+</mo>
-               <msqrt>
-                <mn>5</mn>
-               </msqrt>
-              </mrow>
-             </msqrt>
+             <mn>2</mn>
             </mrow>
+            <msqrt>
+             <mrow>
+              <mn>5</mn>
+              <mo stretchy="false">+</mo>
+              <msqrt>
+               <mn>5</mn>
+              </msqrt>
+             </mrow>
+            </msqrt>
             <mrow>
              <mo fence="true" stretchy="false">(</mo>
              <mrow>
@@ -494,7 +531,7 @@
           <mo fence="true" stretchy="false">)</mo>
          </mrow>
         </mrow>
-        <mn>4</mn>
+        <mn>8</mn>
        </mfrac>
       </mrow>
      </mrow>
@@ -527,15 +564,21 @@
           <mo fence="true" stretchy="true">[</mo>
           <mrow>
            <mrow>
-            <msqrt>
+            <mrow>
+             <mo fence="true" stretchy="false">(</mo>
              <mrow>
-              <mn>3</mn>
-              <mo stretchy="false">−</mo>
-              <msqrt>
-               <mn>5</mn>
-              </msqrt>
+              <mrow>
+               <msqrt>
+                <mn>10</mn>
+               </msqrt>
+               <mo stretchy="false">−</mo>
+               <msqrt>
+                <mn>2</mn>
+               </msqrt>
+              </mrow>
              </mrow>
-            </msqrt>
+             <mo fence="true" stretchy="false">)</mo>
+            </mrow>
             <mrow>
              <mrow>
               <mo fence="true" stretchy="false">(</mo>
@@ -551,16 +594,17 @@
               <mo fence="true" stretchy="false">)</mo>
              </mrow>
              <mo stretchy="false">−</mo>
-             <msqrt>
-              <mrow>
-               <mn>5</mn>
-               <mo stretchy="false">+</mo>
-               <msqrt>
-                <mn>5</mn>
-               </msqrt>
-              </mrow>
-             </msqrt>
+             <mn>2</mn>
             </mrow>
+            <msqrt>
+             <mrow>
+              <mn>5</mn>
+              <mo stretchy="false">+</mo>
+              <msqrt>
+               <mn>5</mn>
+              </msqrt>
+             </mrow>
+            </msqrt>
             <mrow>
              <mo fence="true" stretchy="false">(</mo>
              <mrow>
@@ -605,7 +649,7 @@
           <mo fence="true" stretchy="false">)</mo>
          </mrow>
         </mrow>
-        <mn>4</mn>
+        <mn>8</mn>
        </mfrac>
       </mrow>
      </mrow>
@@ -698,20 +742,20 @@
    </mtr>
   </mtable>
   <annotation encoding="StarMath 5.0">x^2 + y^2 = r^2 newline
-r = 8 newline
-x = sqrt{3 - sqrt{5}}(sqrt{3} - 1) + sqrt{5 + sqrt{5}}(sqrt{3} + 1) newline
-y = sqrt{3 - sqrt{5}}(sqrt{3} + 1) - sqrt{5 + sqrt{5}}(sqrt{3} - 1) newline
+r = 16 newline
+x = sqrt{2}(sqrt{5} - 1)(sqrt{3} - 1) + 2 sqrt{5 + sqrt{5}}(sqrt{3} + 1) newline
+y = sqrt{2}(sqrt{5} - 1)(sqrt{3} + 1) - 2 sqrt{5 + sqrt{5}}(sqrt{3} - 1) newline
 newline
 &quot;sin&quot; left(%pi over 60 right) = y over r =
-{sqrt{3 - sqrt5}(sqrt3 + 1) - sqrt{5 + sqrt5}(sqrt3 - 1)} over 8 newline
+{(sqrt10 - sqrt2)(sqrt3 + 1) - 2sqrt{5 + sqrt5}(sqrt3 - 1)} over 16 newline
 &quot;cos&quot; left(%pi over 60 right) = x over r =
-{sqrt{3 - sqrt5}(sqrt3 - 1) + sqrt{5 + sqrt5}(sqrt3 + 1)} over 8 newline
+{(sqrt10 - sqrt2)(sqrt3 - 1) + 2sqrt{5 + sqrt5}(sqrt3 + 1)} over 16 newline
 &quot;tan&quot; left(%pi over 60 right) = y over x =
 {(2sqrt3 - 1 - sqrt5)(3 + sqrt 5)(sqrt{10 - 2 sqrt5} - 2)} over 8 newline
 &quot;csc&quot; left(%pi over 60 right) = r over y =
-{left[sqrt{3 - sqrt5}(3sqrt3 + 5) + sqrt{5 + sqrt5}(sqrt3 + 1)right](2sqrt3 + sqrt5 - 1)} over 4 newline
+{left[(sqrt10 - sqrt2)(3sqrt3 + 5) + 2sqrt{5 + sqrt5}(sqrt3 + 1)right](2sqrt3 + sqrt5 - 1)} over 8 newline
 &quot;sec&quot; left(%pi over 60 right) = r over x =
-{left[sqrt{3 - sqrt5}(sqrt3 + 1) - sqrt{5 + sqrt5}(sqrt3 - 1)right](sqrt{15 + 6sqrt5} + 2 + sqrt5)} over 4 newline
+{left[(sqrt10 - sqrt2)(sqrt3 + 1) - 2sqrt{5 + sqrt5}(sqrt3 - 1)right](sqrt{15 + 6sqrt5} + 2 + sqrt5)} over 8 newline
 &quot;cot&quot; left(%pi over 60 right) = x over y =
 {(2sqrt3 + 1 + sqrt5)(3 + sqrt5)(sqrt{10 - 2sqrt5} + 2)} over 8</annotation>
  </semantics>
