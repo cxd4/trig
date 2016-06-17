@@ -95,17 +95,24 @@
        </mfrac>
        <mo stretchy="false">=</mo>
        <mfrac>
-        <mrow>
-         <msqrt>
-          <mn>6</mn>
-         </msqrt>
-         <mo stretchy="false">−</mo>
-         <msqrt>
-          <mn>2</mn>
-         </msqrt>
-        </mrow>
+        <msqrt>
+         <mn>2</mn>
+        </msqrt>
         <mn>4</mn>
        </mfrac>
+      </mrow>
+      <mrow>
+       <mo fence="true" stretchy="true">(</mo>
+       <mrow>
+        <mrow>
+         <msqrt>
+          <mn>3</mn>
+         </msqrt>
+         <mo stretchy="false">−</mo>
+         <mn>1</mn>
+        </mrow>
+       </mrow>
+       <mo fence="true" stretchy="true">)</mo>
       </mrow>
      </mrow>
     </mtd>
@@ -132,17 +139,24 @@
        </mfrac>
        <mo stretchy="false">=</mo>
        <mfrac>
-        <mrow>
-         <msqrt>
-          <mn>6</mn>
-         </msqrt>
-         <mo stretchy="false">+</mo>
-         <msqrt>
-          <mn>2</mn>
-         </msqrt>
-        </mrow>
+        <msqrt>
+         <mn>2</mn>
+        </msqrt>
         <mn>4</mn>
        </mfrac>
+      </mrow>
+      <mrow>
+       <mo fence="true" stretchy="true">(</mo>
+       <mrow>
+        <mrow>
+         <msqrt>
+          <mn>3</mn>
+         </msqrt>
+         <mo stretchy="false">+</mo>
+         <mn>1</mn>
+        </mrow>
+       </mrow>
+       <mo fence="true" stretchy="true">)</mo>
       </mrow>
      </mrow>
     </mtd>
@@ -285,8 +299,8 @@ r = 4 newline
 x = sqrt 6 + sqrt 2 newline
 y = sqrt 6 - sqrt 2 newline
 newline
-&quot;sin&quot; left(%pi over 12 right) = y over r = {sqrt 6 - sqrt 2} over 4 newline
-&quot;cos&quot; left(%pi over 12 right) = x over r = {sqrt 6 + sqrt 2} over 4 newline
+&quot;sin&quot; left(%pi over 12 right) = y over r = {sqrt 2 over 4}left(sqrt 3 - 1 right) newline
+&quot;cos&quot; left(%pi over 12 right) = x over r = {sqrt 2 over 4}left(sqrt 3 + 1 right) newline
 &quot;tan&quot; left(%pi over 12 right) = y over x = 2 - sqrt 3 newline
 &quot;csc&quot; left(%pi over 12 right) = r over y = sqrt 6 + sqrt 2 newline
 &quot;sec&quot; left(%pi over 12 right) = r over x = sqrt 6 - sqrt 2 newline
